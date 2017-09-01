@@ -20,6 +20,9 @@
 (use-package ivy
   :ensure t)
 
+(use-package ag
+  :ensure t)
+
 (use-package projectile
   :ensure t
   :config (progn
@@ -35,6 +38,10 @@
 	("C-x f" . helm-find-files))
   :config (helm-mode))
 
+(use-package helm-ag
+  :ensure t
+  :bind(("C-c p s s" . helm-ag-project-root)
+	("C-s" . helm-do-ag-this-file)))
 (use-package helm-projectile
   :ensure t
   :config (helm-projectile-on))
