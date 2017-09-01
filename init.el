@@ -29,6 +29,11 @@
 
             (projectile-mode)))
 
+(use-package helm
+  :ensure t
+  :bind(("M-x" . helm-M-x))
+  :config (helm-mode))
+
 (use-package zenburn-theme
   :ensure t
   :init (load-theme 'zenburn t))
