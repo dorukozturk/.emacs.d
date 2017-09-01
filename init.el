@@ -42,5 +42,17 @@
 (use-package git-timemachine
   :ensure t)
 
+(use-package company
+  :ensure t
+  :config (global-company-mode))
+
+(use-package dumb-jump
+  :ensure t
+  :bind (("M-g ." . dumb-jump-go)
+         ("M-g ," . dumb-jump-back))
+  :config (progn
+            (setq dumb-jump-selector 'ivy
+                  dumb-jump-aggressive nil)))
+
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
