@@ -23,6 +23,10 @@
 (use-package ag
   :ensure t)
 
+(use-package which-key
+  :ensure t
+  :config (which-key-mode))
+
 (use-package projectile
   :ensure t
   :config (progn
