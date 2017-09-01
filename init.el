@@ -2,7 +2,6 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
-
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("gnu" . "http://elpa.gnu.org/packages/")))
@@ -29,3 +28,7 @@
                   projectile-track-known-projects-automatically nil)
 
             (projectile-mode)))
+
+(use-package zenburn-theme
+  :ensure t
+  :init (load-theme 'zenburn t))
