@@ -31,7 +31,8 @@
 
 (use-package helm
   :ensure t
-  :bind(("M-x" . helm-M-x))
+  :bind(("M-x" . helm-M-x)
+	("C-x f" . helm-find-files))
   :config (helm-mode))
 
 (use-package helm-projectile
