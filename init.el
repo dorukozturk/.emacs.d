@@ -13,6 +13,15 @@
 
 (require 'use-package)
 
+(use-package dooz-theme
+  :load-path "modules/")
+
+(use-package dooz-helm
+  :load-path "modules/")
+
+(use-package dooz-projectile
+  :load-path "modules/")
+
 (use-package magit
   :ensure t
   :bind ("C-x g" . magit-status))
@@ -26,33 +35,6 @@
 (use-package which-key
   :ensure t
   :config (which-key-mode))
-
-(use-package projectile
-  :ensure t
-  :config (progn
-            (setq projectile-completion-system 'ivy
-                  projectile-require-project-root nil
-                  projectile-track-known-projects-automatically nil)
-
-            (projectile-mode)))
-
-(use-package helm
-  :ensure t
-  :bind(("M-x" . helm-M-x)
-	("C-x f" . helm-find-files))
-  :config (helm-mode))
-
-(use-package helm-ag
-  :ensure t
-  :bind(("C-c p s s" . helm-ag-project-root)
-	("C-s" . helm-do-ag-this-file)))
-(use-package helm-projectile
-  :ensure t
-  :config (helm-projectile-on))
-
-(use-package zenburn-theme
-  :ensure t
-  :init (load-theme 'zenburn t))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
