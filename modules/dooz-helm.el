@@ -13,8 +13,7 @@
 
 (use-package helm-ag
   :ensure t
-  :bind(("C-c p s s" . helm-ag-project-root)
-	("C-s" . helm-do-ag-this-file)))
+  :bind(("C-c p s s" . helm-ag-project-root)))
 
 (use-package helm-projectile
   :ensure t
