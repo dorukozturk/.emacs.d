@@ -1,7 +1,14 @@
 (use-package helm
   :ensure t
-  :bind(("M-x" . helm-M-x)
-	("C-x f" . helm-find-files))
+  :demand t
+  :bind (("C-c h" . helm-command-prefix)
+         ("C-c l" . helm-locate)
+         ("C-c f" . helm-find)
+         ("C-x b" . helm-mini)
+         ("C-x C-f" . helm-find-files)
+         ("M-x" . helm-M-x)
+         ("M-y" . helm-show-kill-ring)
+         ("M-s o" . helm-occur))
   :config (helm-mode))
 
 (use-package helm-ag
