@@ -5,7 +5,6 @@
   (add-hook 'python-mode-hook 'anaconda-eldoc-mode))
 
 (use-package virtualenvwrapper
-  :ensure t
-  :config(setq venv-location "/home/dorukozturk/Envs/"))
+  :ensure t)
 
 (provide 'dooz-python)
