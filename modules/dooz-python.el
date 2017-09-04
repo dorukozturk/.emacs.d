@@ -7,4 +7,7 @@
 (use-package virtualenvwrapper
   :ensure t)
 
+(use-package realgud
+  :ensure t)
+
 (provide 'dooz-python)
