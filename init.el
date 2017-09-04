@@ -22,6 +22,9 @@
 (use-package dooz-projectile
   :load-path "modules/")
 
+(use-package dooz-python
+  :load-path "modules/")
+
 (use-package magit
   :ensure t
   :bind ("C-x g" . magit-status))
@@ -41,4 +44,3 @@
 
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
-
