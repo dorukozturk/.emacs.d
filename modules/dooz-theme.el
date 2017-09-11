@@ -1,5 +1,5 @@
-(use-package zenburn-theme
+(use-package monokai-theme
   :ensure t
-  :init (load-theme 'zenburn t))
+  :init (load-theme 'monokai t))
 
 (provide 'dooz-theme)
