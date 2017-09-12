@@ -1,6 +1,7 @@
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
