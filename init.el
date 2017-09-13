@@ -2,6 +2,7 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
