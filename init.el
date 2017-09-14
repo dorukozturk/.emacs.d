@@ -48,6 +48,12 @@
   :ensure t
   :config (global-company-mode))
 
+(use-package yaml-mode
+  :ensure t)
+
+(use-package jinja2-mode
+  :ensure t)
+
 (use-package dumb-jump
   :ensure t
   :bind (("M-g ." . dumb-jump-go)
