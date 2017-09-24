@@ -54,6 +54,10 @@
 (use-package jinja2-mode
   :ensure t)
 
+(use-package expand-region
+  :ensure t
+  :bind ("C-q" . er/expand-region))
+
 (use-package dumb-jump
   :ensure t
   :bind (("M-g ." . dumb-jump-go)
