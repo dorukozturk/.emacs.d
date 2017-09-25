@@ -58,6 +58,8 @@
   :ensure t
   :bind ("C-q" . er/expand-region))
 
+(use-package restclient
+  :ensure t)
 (use-package multiple-cursors
   :ensure t
   :bind (("C-c SPC" . set-rectangular-region-anchor)
