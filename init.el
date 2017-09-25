@@ -58,6 +58,13 @@
   :ensure t
   :bind ("C-q" . er/expand-region))
 
+(use-package multiple-cursors
+  :ensure t
+  :bind (("C-c SPC" . set-rectangular-region-anchor)
+         ("C->"     . mc/mark-next-like-this)
+         ("C-<"     . mc/mark-previous-like-this)
+         ("C-c C-<" . mc/mark-all-like-this)))
+
 (use-package dumb-jump
   :ensure t
   :bind (("M-g ." . dumb-jump-go)
