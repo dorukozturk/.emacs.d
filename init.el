@@ -15,6 +15,8 @@
 
 (require 'use-package)
 
+(setq epg-gpg-program "/usr/bin/gpg")
+
 (use-package dooz-theme
   :load-path "modules/")
 
@@ -25,6 +27,9 @@
   :load-path "modules/")
 
 (use-package dooz-python
+  :load-path "modules/")
+
+(use-package dooz-crypt
   :load-path "modules/")
 
 (use-package magit
