@@ -60,6 +60,10 @@
 
 (use-package restclient
   :ensure t)
+
+(use-package terraform-mode
+  :ensure t)
+
 (use-package multiple-cursors
   :ensure t
   :bind (("C-c SPC" . set-rectangular-region-anchor)
