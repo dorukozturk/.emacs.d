@@ -84,5 +84,16 @@
             (setq dumb-jump-selector 'ivy
                   dumb-jump-aggressive nil)))
 
+(use-package undo-tree
+  :bind ("C-c u" . undo-tree-visualize)
+  :ensure t
+  :config (progn
+            (custom-set-variables
+             '(undo-tree-visualizer-timestamps t)
+             '(undo-tree-visualizer-diff t))
+
+            (global-undo-tree-mode))
+  :diminish undo-tree-mode)
+
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
