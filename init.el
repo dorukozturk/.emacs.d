@@ -95,5 +95,11 @@
             (global-undo-tree-mode))
   :diminish undo-tree-mode)
 
+(use-package git-link
+  :ensure t
+  :config (progn
+	    (custom-set-variables
+	     '(git-link-open-in-browser t))))
+
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
