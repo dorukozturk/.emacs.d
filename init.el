@@ -101,5 +101,9 @@
 	    (custom-set-variables
 	     '(git-link-open-in-browser t))))
 
+;; Enable `org-indent-mode' by default
+(with-eval-after-load 'org
+  (setq org-startup-indented t))
+
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
