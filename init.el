@@ -101,6 +101,9 @@
 	    (custom-set-variables
 	     '(git-link-open-in-browser t))))
 
+(use-package markdown-mode
+  :ensure t)
+
 ;; Enable `org-indent-mode' by default
 (with-eval-after-load 'org
   (setq org-startup-indented t))
