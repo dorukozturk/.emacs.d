@@ -117,5 +117,18 @@
   :ensure t
   :config (progn
             (require 'vlf-setup)))
+
+(use-package yasnippet
+  :config
+  (yas-reload-all)
+  (yas-global-mode 1)
+  (yas-load-directory "~/.emacs.d/snippets"))
+
+(use-package helm-c-yasnippet
+  :ensure t
+  :bind (("C-c y" . helm-yas-complete)))
+
+(setq helm-yas-space-match-any-greedy t)
+
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
