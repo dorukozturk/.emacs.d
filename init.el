@@ -113,5 +113,9 @@
 (with-eval-after-load 'org
   (setq org-startup-indented t))
 
+(use-package vlf
+  :ensure t
+  :config (progn
+            (require 'vlf-setup)))
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
