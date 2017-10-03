@@ -104,6 +104,11 @@
 (use-package markdown-mode
   :ensure t)
 
+;; package is unmaintained
+(use-package ansible-doc
+  :ensure t
+  :init (add-hook 'yaml-mode-hook 'ansible-doc-mode))
+
 ;; Enable `org-indent-mode' by default
 (with-eval-after-load 'org
   (setq org-startup-indented t))
