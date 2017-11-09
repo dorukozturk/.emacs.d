@@ -136,6 +136,13 @@
 (use-package gist
   :ensure t)
 
+(use-package avy-menu
+  :ensure t
+  :bind (("M-g c" . avy-goto-char)
+         ("M-g w" . avy-goto-word-or-subword-1)
+         ("M-g SPC" . avy-pop-mark)))
+
+
 (setq helm-yas-space-match-any-greedy t)
 (setq flymake-python-pyflakes-executable "flake8")
 (setq flymake-python-pyflakes-extra-arguments '("--max-line-length=120"))
