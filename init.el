@@ -69,6 +69,11 @@
 (use-package terraform-mode
   :ensure t)
 
+(use-package flymake-python-pyflakes
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook 'flymake-python-pyflakes-load))
+
 (use-package multiple-cursors
   :ensure t
   :bind (("C-c SPC" . set-rectangular-region-anchor)
@@ -128,7 +133,17 @@
   :ensure t
   :bind (("C-c y" . helm-yas-complete)))
 
+(use-package gist
+  :ensure t)
+
 (setq helm-yas-space-match-any-greedy t)
+(setq flymake-python-pyflakes-executable "flake8")
+(setq flymake-python-pyflakes-extra-arguments '("--max-line-length=120"))
+
+(show-paren-mode 1)
+(add-to-list 'exec-path "~/.local/bin/")
+(setq browse-url-browser-function 'browse-url-chromium)
 
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
+ )
