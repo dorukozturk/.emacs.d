@@ -154,3 +154,5 @@
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
  )
+
+(setq require-final-newline t)
