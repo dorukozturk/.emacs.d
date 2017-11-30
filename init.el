@@ -32,6 +32,12 @@
 (use-package dooz-crypt
   :load-path "modules/")
 
+(use-package dooz-chords
+  :load-path "modules/")
+
+(use-package dooz-jupyter
+  :load-path "modules/")
+
 (use-package magit
   :ensure t
   :bind ("C-x g" . magit-status))
@@ -67,6 +73,9 @@
   :ensure t)
 
 (use-package terraform-mode
+  :ensure t)
+
+(use-package tldr
   :ensure t)
 
 (use-package flymake-python-pyflakes
@@ -136,23 +145,35 @@
 (use-package gist
   :ensure t)
 
-(use-package avy-menu
-  :ensure t
-  :bind (("M-g c" . avy-goto-char)
-         ("M-g w" . avy-goto-word-or-subword-1)
-         ("M-g SPC" . avy-pop-mark)))
-
-
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq helm-yas-space-match-any-greedy t)
 (setq flymake-python-pyflakes-executable "flake8")
 (setq flymake-python-pyflakes-extra-arguments '("--max-line-length=120"))
 
 (show-paren-mode 1)
+(linum-mode 1)
 (add-to-list 'exec-path "~/.local/bin/")
 (setq browse-url-browser-function 'browse-url-chromium)
 
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
- )
 
 (setq require-final-newline t)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ein:jupyter-default-server-command "/home/dorukozturk/.virtualenvs/nwb-numpy/bin/jupyter")
+ '(git-link-open-in-browser t)
+ '(package-selected-packages
+   (quote
+    (tldr ein-subpackages ein-notebook ein-loaddefs ein emacs-ipython-notebook php-mode zenburn-theme yaml-mode which-key vlf virtualenvwrapper use-package undo-tree terraform-mode scala-mode restclient realgud multiple-cursors monokai-theme markdown-mode magit key-chord json-mode jinja2-mode ivy helm-projectile helm-c-yasnippet helm-ag git-timemachine git-link gist flymake-python-pyflakes flycheck expand-region dumb-jump dockerfile-mode company avy-menu ansible-doc anaconda-mode ag)))
+ '(undo-tree-visualizer-diff t)
+ '(undo-tree-visualizer-timestamps t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

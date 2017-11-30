@@ -5,3 +5,7 @@ anaconda-mode
 *.cache
 recentf
 snippets
+bookmarks
+tldr
+url
+request
