@@ -3,6 +3,7 @@
 (tool-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(semantic-mode 1)
 
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
@@ -159,6 +160,7 @@
 (global-set-key (kbd "C--") 'text-scale-decrease)
 
 (setq require-final-newline t)
+(setq projectile-track-known-projects-automatically t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -166,9 +168,10 @@
  ;; If there is more than one, they won't work right.
  '(ein:jupyter-default-server-command "/home/dorukozturk/.virtualenvs/nwb-numpy/bin/jupyter")
  '(git-link-open-in-browser t)
+ '(helm-ag-ignore-patterns (quote ("*.ipynb")))
  '(package-selected-packages
    (quote
-    (tldr ein-subpackages ein-notebook ein-loaddefs ein emacs-ipython-notebook php-mode zenburn-theme yaml-mode which-key vlf virtualenvwrapper use-package undo-tree terraform-mode scala-mode restclient realgud multiple-cursors monokai-theme markdown-mode magit key-chord json-mode jinja2-mode ivy helm-projectile helm-c-yasnippet helm-ag git-timemachine git-link gist flymake-python-pyflakes flycheck expand-region dumb-jump dockerfile-mode company avy-menu ansible-doc anaconda-mode ag)))
+    (cmake-mode helm-dash inf-mongo wgrep-helm wgrep pug-mode tldr ein-subpackages ein-notebook ein-loaddefs ein emacs-ipython-notebook php-mode zenburn-theme yaml-mode which-key vlf virtualenvwrapper use-package undo-tree terraform-mode scala-mode restclient realgud multiple-cursors monokai-theme markdown-mode magit key-chord json-mode jinja2-mode ivy helm-projectile helm-c-yasnippet helm-ag git-timemachine git-link gist flymake-python-pyflakes flycheck expand-region dumb-jump dockerfile-mode company avy-menu ansible-doc anaconda-mode ag)))
  '(undo-tree-visualizer-diff t)
  '(undo-tree-visualizer-timestamps t))
 (custom-set-faces
